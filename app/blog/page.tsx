@@ -1,0 +1,216 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Heart, Leaf, Users, Wheat } from 'lucide-react'
+
+const categories = [
+  { name: 'Tous les articles', icon: null, count: 12 },
+  { name: 'Éco-éducation', icon: Leaf, count: 4 },
+  { name: 'Santé', icon: Heart, count: 3 },
+  { name: 'Droits humains', icon: Users, count: 3 },
+  { name: 'Agriculture', icon: Wheat, count: 2 },
+]
+
+const posts = [
+  {
+    title: 'Impact de nos actions en 2023',
+    description: 'Découvrez les résultats de nos projets et leur impact sur les communautés.',
+    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Rapport',
+    date: '10 Mars 2024',
+    author: {
+      name: 'Marie Dubois',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    title: 'Nouveau programme d\'agriculture durable',
+    description: 'Lancement de notre initiative pour soutenir les agriculteurs locaux.',
+    image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Agriculture',
+    date: '5 Mars 2024',
+    author: {
+      name: 'Thomas Martin',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    title: 'Victoire pour les droits humains',
+    description: 'Une avancée majeure dans la protection des droits des personnes vulnérables.',
+    image: 'https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Droits Humains',
+    date: '1 Mars 2024',
+    author: {
+      name: 'Sarah Ndiaye',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    title: 'Distribution de moustiquaires imprégnées',
+    description: 'Campagne de prévention contre le paludisme dans la région.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Santé',
+    date: '25 Février 2024',
+    author: {
+      name: 'Sarah Ndiaye',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    title: 'Sensibilisation au changement climatique',
+    description: 'Retour sur notre journée de sensibilisation dans les écoles.',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Éco-éducation',
+    date: '20 Février 2024',
+    author: {
+      name: 'Thomas Martin',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    },
+  },
+]
+
+export default function Blog() {
+  return (
+    <div className="min-h-screen pt-24 pb-12">
+      {/* Hero Section */}
+      <div className="relative">
+        <div className="absolute inset-0 h-[400px]">
+          <Image
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Blog hero"
+            fill
+            className="object-cover brightness-50"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Notre Blog
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
+            Découvrez nos actualités, nos projets et leur impact sur le terrain.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
+        <div className="lg:flex lg:gap-x-16">
+          {/* Sidebar */}
+          <aside className="lg:w-64 flex-none">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Catégories</h2>
+            <nav className="space-y-1">
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  className="flex items-center gap-x-3 w-full px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg"
+                >
+                  {category.icon && (
+                    <category.icon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  )}
+                  <span>{category.name}</span>
+                  <span className="ml-auto">{category.count}</span>
+                </button>
+              ))}
+            </nav>
+
+            {/* Newsletter */}
+            <div className="mt-12">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Newsletter</h2>
+              <div className="rounded-lg bg-gray-50 p-6">
+                <h3 className="text-sm font-medium text-gray-900">
+                  Restez informé de nos actions
+                </h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Recevez nos dernières actualités directement dans votre boîte mail.
+                </p>
+                <form className="mt-4">
+                  <Input
+                    type="email"
+                    placeholder="Votre email"
+                    className="mb-2"
+                  />
+                  <Button className="w-full bg-green-700 hover:bg-green-800">
+                    S'abonner
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </aside>
+
+          {/* Main Content */}
+          <main className="mt-12 lg:mt-0 lg:flex-auto">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+              {posts.map((post) => (
+                <Card key={post.title} className="flex flex-col overflow-hidden">
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <div className="flex items-center gap-x-4 text-xs">
+                      <time dateTime={post.date} className="text-gray-500">
+                        {post.date}
+                      </time>
+                      <span className="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600">
+                        {post.category}
+                      </span>
+                    </div>
+                    <CardTitle className="mt-3 text-lg font-semibold leading-6 text-gray-900">
+                      <Link href={`/blog/${post.title.toLowerCase().replace(/ /g, '-')}`} className="hover:text-green-700">
+                        {post.title}
+                      </Link>
+                    </CardTitle>
+                    <CardDescription>
+                      {post.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="mt-auto">
+                    <div className="flex items-center gap-x-4">
+                      <Image
+                        src={post.author.image}
+                        alt={post.author.name}
+                        className="h-10 w-10 rounded-full"
+                        width={40}
+                        height={40}
+                      />
+                      <div className="text-sm">
+                        <p className="font-medium text-gray-900">{post.author.name}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="mt-12 flex items-center justify-center">
+              <nav className="flex items-center gap-x-2">
+                <Button variant="outline" className="text-sm">
+                  Précédent
+                </Button>
+                <Button variant="outline" className="text-sm">
+                  1
+                </Button>
+                <Button variant="outline" className="text-sm">
+                  2
+                </Button>
+                <Button variant="outline" className="text-sm">
+                  3
+                </Button>
+                <Button variant="outline" className="text-sm">
+                  Suivant
+                </Button>
+              </nav>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  )
+}
