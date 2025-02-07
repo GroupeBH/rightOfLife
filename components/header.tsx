@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Menu, Globe, X } from 'lucide-react'
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Menu, Globe, X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import logo from '@/public/logo.jpg'
+} from "@/components/ui/dropdown-menu";
+import logo from '@/public/logo.jpg';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -20,10 +20,10 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Partenaires', href: '/partners' },
   { name: 'Contact', href: '/contact' },
-]
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
@@ -81,24 +81,25 @@ export default function Header() {
           </DropdownMenu>
         </div>
       </nav>
+
       {/* Mobile menu */}
-      <div 
+      <div
         className={`${
           mobileMenuOpen ? 'fixed' : 'hidden'
         } lg:hidden inset-0 z-[100]`}
       >
         {/* Overlay */}
-        <div 
-          className="fixed inset-0 bg-black/25" 
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           aria-hidden="true"
           onClick={() => setMobileMenuOpen(false)}
         />
-        
+
         {/* Menu panel */}
-        <div className="fixed inset-y-0 right-0 z-[101] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed right-0 z-[500] w-full max-w-sm overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="-m-1.5 p-1.5 flex items-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -147,5 +148,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

@@ -102,7 +102,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
           <div className="pt-16 pb-20 sm:pt-24 sm:pb-32">
             <div className="text-center">
               <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
@@ -112,7 +112,7 @@ export default function Home() {
                 Engagés dans l'éco-éducation, la santé, les droits humains et l'agriculture durable pour un impact positif sur notre société.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
-                <Button size="lg" className="w-full sm:w-auto bg-green-700 hover:bg-green-800" asChild>
+                <Button size="lg" className="w-full sm:w-auto bg-pink-700 hover:bg-pink-800" asChild>
                   <Link href="/donate">Faire un don</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 text-white border-white hover:bg-white/20" asChild>
@@ -149,7 +149,7 @@ export default function Home() {
                     <p className="mt-6">
                       <Link
                         href={`/activities#${activity.title.toLowerCase()}`}
-                        className="text-sm font-semibold leading-6 text-green-700"
+                        className="text-sm font-semibold leading-6 text-pink-700"
                       >
                         En savoir plus <span aria-hidden="true">→</span>
                       </Link>
@@ -203,7 +203,7 @@ export default function Home() {
                 <CardContent className="mt-auto">
                   <Link
                     href={`/blog/${post.title.toLowerCase().replace(/ /g, '-')}`}
-                    className="text-sm font-semibold leading-6 text-green-700"
+                    className="text-sm font-semibold leading-6 text-blue-500"
                   >
                     Lire la suite <span aria-hidden="true">→</span>
                   </Link>
