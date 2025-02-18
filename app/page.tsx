@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
 import {posts} from './blog/data'
+import headerBg from '@/public/header5.jpg'
 
 const activities = [
   {
@@ -97,7 +98,7 @@ export default function Home() {
       <div className="relative pt-16">
         <div className="absolute inset-0 h-[500px] sm:h-[600px]">
           <Image
-            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src={headerBg.src}
             alt="Hero background"
             fill
             className="object-cover brightness-50"
@@ -248,13 +249,13 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <Button variant="outline" asChild>
               <Link href="/partners">
                 Voir tous nos partenaires
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
