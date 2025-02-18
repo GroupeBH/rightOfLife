@@ -17,7 +17,7 @@ const navigation = [
   { name: 'Accueil', href: '/' },
   { name: 'À propos', href: '/about' },
   { name: 'Nos activités', href: '/activities' },
-  { name: 'Réalisations', href: '/blog' },
+  { name: 'Nos réalisations', href: '/blog' },
   { name: 'Partenaires', href: '/partners' },
   { name: 'Contact', href: '/contact' },
 ];

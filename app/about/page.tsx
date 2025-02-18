@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
+import Link from 'next/link'
 
 const team = [
   {
@@ -63,10 +64,12 @@ export default function About() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Notre Histoire
+            A propos de nous
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
-            Depuis 2010, EcoSolidaire œuvre pour un monde plus juste et durable à travers des actions concrètes et innovantes.
+          Nous sommes une organisation non gouvernementale créée 
+              à Kinshasa le 02 décembre 2021 à l{"'"}initiative de Monsieur 
+              Fostro mulatu pakasa. 
           </p>
         </div>
       </div>
@@ -79,8 +82,9 @@ export default function About() {
               Notre Mission
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              EcoSolidaire s'engage à créer un impact positif durable à travers quatre piliers d'action : l'éco-éducation,
-              la lutte contre le paludisme, la défense des droits humains et l'agriculture durable.
+              
+              Nous travaillons sur des actions sociales internationales, 
+              l{"'"}éducation environnementale et les droits humains. 
             </p>
           </div>
         </div>
@@ -102,7 +106,7 @@ export default function About() {
               {values.map((value) => (
                 <div key={value.title} className="flex flex-col items-center text-center">
                   <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                    <value.icon className="h-8 w-8 text-green-700" aria-hidden="true" />
+                    <value.icon className="h-8 w-8 text-pink-700" aria-hidden="true" />
                     {value.title}
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
@@ -139,7 +143,7 @@ export default function About() {
                 </div>
                 <CardContent className="flex-1 p-6">
                   <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-green-700">{member.role}</p>
+                  <p className="mt-1 text-sm font-medium text-pink-700">{member.role}</p>
                   <p className="mt-4 text-sm text-gray-600">{member.bio}</p>
                 </CardContent>
               </Card>
@@ -149,7 +153,7 @@ export default function About() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-green-700">
+      <div className="bg-blue-500">
         <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -159,11 +163,8 @@ export default function About() {
               Ensemble, nous pouvons faire la différence. Rejoignez-nous dans notre mission pour un monde meilleur.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                Devenir bénévole
-              </Button>
-              <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100">
-                Faire un don
+              <Button size="lg" className="bg-white text-pink-700 border border-pink-700 hover:bg-gray-100">
+                <Link href="/contact">Faire un don</Link>
               </Button>
             </div>
           </div>

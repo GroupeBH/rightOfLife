@@ -4,71 +4,14 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
+import  {posts} from './data'
 
 const categories = [
-  { name: 'Tous les articles', icon: null, count: 12 },
-  { name: 'Éco-éducation', icon: Leaf, count: 4 },
-  { name: 'Santé', icon: Heart, count: 3 },
+  { name: 'Tous les articles', icon: null, count: 5 },
+  { name: 'Éco-éducation', icon: Leaf, count: 1 },
+  { name: 'Santé', icon: Heart, count: 1 },
   { name: 'Droits humains', icon: Users, count: 3 },
-  { name: 'Agriculture', icon: Wheat, count: 2 },
-]
-
-const posts = [
-  {
-    title: 'Impact de nos actions en 2023',
-    description: 'Découvrez les résultats de nos projets et leur impact sur les communautés.',
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Rapport',
-    date: '10 Mars 2024',
-    author: {
-      name: 'Marie Dubois',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  },
-  {
-    title: 'Nouveau programme d\'agriculture durable',
-    description: 'Lancement de notre initiative pour soutenir les agriculteurs locaux.',
-    image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Agriculture',
-    date: '5 Mars 2024',
-    author: {
-      name: 'Thomas Martin',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  },
-  {
-    title: 'Victoire pour les droits humains',
-    description: 'Une avancée majeure dans la protection des droits des personnes vulnérables.',
-    image: 'https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Droits Humains',
-    date: '1 Mars 2024',
-    author: {
-      name: 'Sarah Ndiaye',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  },
-  {
-    title: 'Distribution de moustiquaires imprégnées',
-    description: 'Campagne de prévention contre le paludisme dans la région.',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Santé',
-    date: '25 Février 2024',
-    author: {
-      name: 'Sarah Ndiaye',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  },
-  {
-    title: 'Sensibilisation au changement climatique',
-    description: 'Retour sur notre journée de sensibilisation dans les écoles.',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Éco-éducation',
-    date: '20 Février 2024',
-    author: {
-      name: 'Thomas Martin',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  },
+  { name: 'Agriculture', icon: Wheat, count: 1 },
 ]
 
 export default function Blog() {
@@ -87,7 +30,7 @@ export default function Blog() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Notre Blog
+            Nos réalisations
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
             Découvrez nos actualités, nos projets et leur impact sur le terrain.
@@ -132,7 +75,7 @@ export default function Blog() {
                     className="mb-2"
                   />
                   <Button className="w-full bg-green-700 hover:bg-green-800">
-                    S'abonner
+                    S{"'"}abonner
                   </Button>
                 </form>
               </div>
@@ -142,11 +85,11 @@ export default function Blog() {
           {/* Main Content */}
           <main className="mt-12 lg:mt-0 lg:flex-auto">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
-              {posts.map((post) => (
+              {posts.map((post: any) => (
                 <Card key={post.title} className="flex flex-col overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src={post.image}
+                      src={post.images[0].url}
                       alt={post.title}
                       fill
                       className="object-cover"
@@ -158,7 +101,7 @@ export default function Blog() {
                         {post.date}
                       </time>
                       <span className="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600">
-                        {post.category}
+                        {post.category.name}
                       </span>
                     </div>
                     <CardTitle className="mt-3 text-lg font-semibold leading-6 text-gray-900">
@@ -184,12 +127,20 @@ export default function Blog() {
                       </div>
                     </div>
                   </CardContent>
+                  <CardContent className="mt-auto">
+                    <Link
+                      href={`/blog/${post.title.toLowerCase().replace(/ /g, '-')}`}
+                      className="text-sm font-semibold leading-6 text-blue-500"
+                    >
+                      Lire la suite <span aria-hidden="true">→</span>
+                    </Link>
+                  </CardContent>
                 </Card>
-              ))}
+              )).reverse()}
             </div>
 
             {/* Pagination */}
-            <div className="mt-12 flex items-center justify-center">
+            {/* <div className="mt-12 flex items-center justify-center">
               <nav className="flex items-center gap-x-2">
                 <Button variant="outline" className="text-sm">
                   Précédent
@@ -207,7 +158,7 @@ export default function Blog() {
                   Suivant
                 </Button>
               </nav>
-            </div>
+            </div> */}
           </main>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
+import {posts} from './blog/data'
 
 const activities = [
   {
@@ -89,6 +90,7 @@ const partners = [
 ]
 
 export default function Home() {
+  // console.log(posts)
   return (
     <>
       {/* Hero Section */}
@@ -116,7 +118,7 @@ export default function Home() {
                   <Link href="/contact">Faire un don</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 text-white border-white hover:bg-white/20" asChild>
-                  <Link href="/activities">Découvrir nos projets</Link>
+                  <Link href="/blog">Découvrir nos projets</Link>
                 </Button>
               </div>
             </div>
@@ -174,11 +176,11 @@ export default function Home() {
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {latestPosts.map((post) => (
+            {posts.map((post: any) => (
               <Card key={post.title} className="flex flex-col overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src={post.image}
+                    src={post.images[0].url}
                     alt={post.title}
                     fill
                     className="object-cover"
@@ -190,7 +192,7 @@ export default function Home() {
                       {post.date}
                     </time>
                     <span className="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600">
-                      {post.category}
+                      {post.category.name}
                     </span>
                   </div>
                   <CardTitle className="mt-3 text-lg font-semibold leading-6 text-gray-900">
@@ -209,7 +211,7 @@ export default function Home() {
                   </Link>
                 </CardContent>
               </Card>
-            ))}
+            )).reverse()}
           </div>
         </div>
       </div>
