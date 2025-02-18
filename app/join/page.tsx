@@ -19,17 +19,16 @@ import { Check, Users } from 'lucide-react'
 const membershipTypes = [
   {
     name: 'Membre actif',
-    price: '30€/an',
+    price: '0$/an',
     benefits: [
       'Participation aux assemblées générales',
-      'Droit de vote',
       'Newsletter mensuelle',
       'Participation aux événements',
     ],
   },
   {
     name: 'Membre bienfaiteur',
-    price: '100€/an',
+    price: '10$/an',
     benefits: [
       'Tous les avantages membre actif',
       'Invitation aux événements VIP',
@@ -73,7 +72,7 @@ export default function Join() {
             </div>
             <DialogTitle className="text-center">Bienvenue !</DialogTitle>
             <DialogDescription className="text-center">
-              Votre demande d'adhésion a été enregistrée. Vous recevrez un email de confirmation sous peu.
+              Votre demande d{"'"}adhésion a été enregistrée. Vous recevrez un email de confirmation sous peu.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -105,7 +104,7 @@ export default function Join() {
           {/* Membership Types */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Types d'adhésion
+              Types d{"'"}adhésion
             </h2>
             <div className="grid gap-8">
               {membershipTypes.map((type) => (
@@ -138,7 +137,7 @@ export default function Join() {
           {/* Application Form */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Formulaire d'adhésion
+              Formulaire d{"'"}adhésion
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
@@ -202,7 +201,7 @@ export default function Join() {
                   name="motivation"
                   value={formData.motivation}
                   onChange={handleChange}
-                  placeholder="Pourquoi souhaitez-vous rejoindre EcoSolidaire ?"
+                  placeholder="Pourquoi souhaitez-vous rejoindre Right of Life ?"
                   className="h-32"
                   required
                 />

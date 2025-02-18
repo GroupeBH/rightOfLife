@@ -17,7 +17,7 @@ const navigation = [
   { name: 'Accueil', href: '/' },
   { name: 'À propos', href: '/about' },
   { name: 'Nos activités', href: '/activities' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Réalisations', href: '/blog' },
   { name: 'Partenaires', href: '/partners' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -66,9 +66,9 @@ export default function Header() {
             <Link href="/join">Adhérer</Link>
           </Button>
           <Button variant="default" className="bg-blue-500 hover:bg-blue-600" asChild>
-            <Link href="/donate">Faire un don</Link>
+            <Link href="/contact">Faire un don</Link>
           </Button>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Globe className="h-4 w-4" />
@@ -78,7 +78,7 @@ export default function Header() {
               <DropdownMenuItem>Français</DropdownMenuItem>
               <DropdownMenuItem>English</DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
       </nav>
 
@@ -140,7 +140,7 @@ export default function Header() {
                   <Link href="/join" onClick={() => setMobileMenuOpen(false)}>Adhérer</Link>
                 </Button>
                 <Button variant="default" className="w-full bg-pink-500 hover:bg-pink-600" asChild>
-                  <Link href="/donate" onClick={() => setMobileMenuOpen(false)}>Faire un don</Link>
+                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Faire un don</Link>
                 </Button>
               </div>
             </div>

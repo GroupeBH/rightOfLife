@@ -109,11 +109,11 @@ export default function Home() {
                 Ensemble, construisons<br className="hidden sm:block" /> un monde meilleur
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg md:text-xl text-gray-200 px-4 sm:px-0">
-                Engagés dans l'éco-éducation, la santé, les droits humains et l'agriculture durable pour un impact positif sur notre société.
+                Engagés dans l{"'"}éco-éducation, la santé, les droits humains et l{"'"}agriculture durable pour un impact positif sur notre société.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
                 <Button size="lg" className="w-full sm:w-auto bg-pink-700 hover:bg-pink-800" asChild>
-                  <Link href="/donate">Faire un don</Link>
+                  <Link href="/contact">Faire un don</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 text-white border-white hover:bg-white/20" asChild>
                   <Link href="/activities">Découvrir nos projets</Link>
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Nos domaines d'action
+              Nos domaines d{"'"}action
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Découvrez nos différents programmes et initiatives pour un impact durable.

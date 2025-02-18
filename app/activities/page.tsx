@@ -81,7 +81,7 @@ export default function Activities() {
             Nos Activités
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
-            Découvrez nos différents programmes et initiatives pour un impact durable sur les communautés et l'environnement.
+            Découvrez nos différents programmes et initiatives pour un impact durable sur les communautés et l{"'"}environnement.
           </p>
         </div>
       </div>
@@ -91,10 +91,10 @@ export default function Activities() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Nos domaines d'action
+              Nos domaines d{"'"}action
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Chaque programme est conçu pour maximiser notre impact positif sur la société et l'environnement.
+              Chaque programme est conçu pour maximiser notre impact positif sur la société et l{"'"}environnement.
             </p>
           </div>
 

@@ -20,17 +20,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Notre adresse',
-    content: '123 Avenue de la République\n75011 Paris, France',
+    content: 'Avenue Ngafani N°102, Quartier Masanga mbila Commune de Kinshasa, ville de Kinshasa RDC 243 Kinshasa, Democratic Republic of the Congo',
   },
   {
     icon: Phone,
     title: 'Téléphone',
-    content: '+33 (0)1 23 45 67 89',
+    content: '+243855762421',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'contact@ecosolidaire.org',
+    content: 'info@rightoflife.org',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Contact() {
             Contactez-nous
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-200 max-w-xl">
-            Une question ? Un projet ? N'hésitez pas à nous contacter. Notre équipe est là pour vous répondre.
+            Une question ? Un projet ? N{"'"}hésitez pas à nous contacter. Notre équipe est là pour vous répondre.
           </p>
         </div>
       </div>
@@ -175,7 +175,7 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <Card>
                 <CardContent className="p-0">
                   <div className="relative h-[300px]">
@@ -188,7 +188,7 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

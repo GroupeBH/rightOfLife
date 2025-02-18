@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import Link from 'next/link'
 
 const partners = [
   {
@@ -93,7 +94,7 @@ export default function Partners() {
             </p>
             <div className="mt-10">
               <Button size="lg" className="bg-green-700 hover:bg-green-800">
-                Nous contacter
+                <Link href="/contact">Nous contacter</Link>
               </Button>
             </div>
           </div>
