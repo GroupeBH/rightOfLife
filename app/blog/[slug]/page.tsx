@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Calendar, Tag } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getRelatedPosts, posts } from '../data'
-import { ShareButtons } from './components/ShareButtons'
-import { NewsletterButton } from './components/NewsLetterButton'
+// import { ShareButtons } from './components/ShareButtons'
+// import { NewsletterButton } from './components/NewsLetterButton'
 
 // Génère les chemins statiques pour chaque article
 export function generateStaticParams() {
@@ -145,10 +145,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <Button variant="outline" asChild>
             <Link href="/blog">← Retour aux articles</Link>
           </Button>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <ShareButtons />
             <NewsletterButton />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

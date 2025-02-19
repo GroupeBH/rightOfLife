@@ -76,7 +76,7 @@ export default function Contact() {
       <div className="relative">
         <div className="absolute inset-0 h-[400px]">
           <Image
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dblzafklq/image/upload/v1739956665/h6hhcj6nanrykupwlxlv.jpg"
             alt="Contact hero"
             fill
             className="object-cover brightness-50"
@@ -147,7 +147,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-green-700 hover:bg-green-800">
+              <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-800">
                 Envoyer le message
               </Button>
             </form>
@@ -162,8 +162,8 @@ export default function Contact() {
               {contactInfo.map((info) => (
                 <Card key={info.title}>
                   <CardContent className="flex items-start gap-4 p-6">
-                    <div className="rounded-lg bg-green-50 p-3">
-                      <info.icon className="h-6 w-6 text-green-700" />
+                    <div className="rounded-lg bg-pink-50 p-3">
+                      <info.icon className="h-6 w-6 text-pink-700" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">{info.title}</h3>

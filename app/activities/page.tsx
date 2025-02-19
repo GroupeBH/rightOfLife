@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
+import Link from 'next/link'
 
 const activities = [
   {
@@ -10,7 +11,7 @@ const activities = [
     description: 'Sensibilisation et éducation pour la protection de l\'environnement',
     icon: Leaf,
     color: 'text-green-600',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1739891984/iqoxe4vdne9hqaixymzq.jpg',
     content: `Notre programme d'éco-éducation vise à sensibiliser les communautés aux enjeux environnementaux et à promouvoir des pratiques durables. Nous organisons des ateliers, des formations et des événements pour :
 
     • Sensibiliser à l'importance de la protection de l'environnement
@@ -24,8 +25,8 @@ const activities = [
     description: 'Combat contre le paludisme et les maladies vectorielles',
     icon: Heart,
     color: 'text-red-600',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    content: `Notre programme de lutte contre le paludisme combine prévention, traitement et recherche pour réduire l'impact de cette maladie mortelle. Nos actions incluent :
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1739891987/zrizcxjnork9zalm1msg.jpg',
+    content: `Notre programme de lutte contre le paludisme combine prévention et traitement pour réduire l'impact de cette maladie mortelle. Nos actions incluent :
 
     • Distribution de moustiquaires imprégnées
     • Campagnes de sensibilisation et de prévention
@@ -38,7 +39,7 @@ const activities = [
     description: 'Assistance et soutien aux personnes vulnérables',
     icon: Users,
     color: 'text-blue-600',
-    image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1739891986/wxbkog9ljnzzlf78ihno.jpg',
     content: `Notre programme de défense des droits humains offre assistance et soutien aux personnes vulnérables, notamment :
 
     • Aide juridique aux personnes en difficulté
@@ -52,7 +53,7 @@ const activities = [
     description: 'Promotion de pratiques agricoles responsables',
     icon: Wheat,
     color: 'text-yellow-600',
-    image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1739954282/fi0qgyscmzvdemctbgdw.jpg',
     content: `Notre programme d'agriculture durable vise à développer des pratiques agricoles respectueuses de l'environnement et économiquement viables :
 
     • Formation aux techniques agroécologiques
@@ -69,7 +70,7 @@ export default function Activities() {
       <div className="relative">
         <div className="absolute inset-0 h-[400px]">
           <Image
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dblzafklq/image/upload/v1739955665/xrxmlqfi9ecyh6sptlwk.jpg"
             alt="Activities hero"
             fill
             className="object-cover brightness-50"
@@ -130,8 +131,8 @@ export default function Activities() {
                     {activity.content}
                   </p>
                   <div className="mt-8">
-                    <Button className="bg-green-700 hover:bg-green-800">
-                      Soutenir ce projet
+                    <Button className="bg-pink-700 hover:bg-pink-800">
+                      <Link href="/contact">Soutenir ce projet</Link>                     
                     </Button>
                   </div>
                 </div>
@@ -142,8 +143,8 @@ export default function Activities() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-green-700">
-        <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div className="bg-blue-500">
+        <div className="px-6 py-20 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Prêt à nous rejoindre ?
@@ -152,11 +153,11 @@ export default function Activities() {
               Votre soutien fait la différence. Rejoignez-nous dans notre mission pour un monde meilleur.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+              {/* <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
                 Devenir bénévole
-              </Button>
-              <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100">
-                Faire un don
+              </Button> */}
+              <Button size="lg" className="bg-white text-pink-700 hover:bg-gray-100">
+                <Link href={`/contact`}>Faire un don</Link>
               </Button>
             </div>
           </div>

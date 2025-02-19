@@ -96,7 +96,7 @@ export default function Header() {
         />
 
         {/* Menu panel */}
-        <div className="fixed right-0 z-[500] w-full max-w-sm overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed right-0 z-[500] h-[100vh] w-[90vw] max-w-sm overflow-y-auto bg-slate-50 px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link
               href="/"

@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
 import  {posts} from './data'
+import headerBg from '@/public/header5.jpg'
 
 const categories = [
   { name: 'Tous les articles', icon: null, count: 5 },
@@ -21,7 +22,7 @@ export default function Blog() {
       <div className="relative">
         <div className="absolute inset-0 h-[400px]">
           <Image
-            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src={headerBg.src}
             alt="Blog hero"
             fill
             className="object-cover brightness-50"

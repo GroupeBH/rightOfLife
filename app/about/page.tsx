@@ -55,7 +55,7 @@ export default function About() {
       <div className="relative">
         <div className="absolute inset-0 h-[400px]">
           <Image
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://res.cloudinary.com/dblzafklq/image/upload/v1739891987/q2jvdkbshk0dtnv4kn5m.jpg"
             alt="About hero"
             fill
             className="object-cover brightness-50"

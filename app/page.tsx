@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Heart, Leaf, Users, Wheat } from 'lucide-react'
 import {posts} from './blog/data'
-import headerBg from '@/public/header5.jpg'
+import headerBg from '@/public/header6.jpg'
 
 const activities = [
   {
