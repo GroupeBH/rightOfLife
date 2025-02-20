@@ -5,10 +5,10 @@ const navigation = {
   main: [
     { name: 'À propos', href: '/about' },
     { name: 'Nos activités', href: '/activities' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Nos réalisations', href: '/contact' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Mentions légales', href: '/legal' },
-    { name: 'Politique de confidentialité', href: '/privacy' },
+    // { name: 'Mentions légales', href: '/legal' },
+    // { name: 'Politique de confidentialité', href: '/privacy' },
   ],
   social: [
     {

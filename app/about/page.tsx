@@ -6,22 +6,34 @@ import Link from 'next/link'
 
 const team = [
   {
-    name: 'Marie Dubois',
-    role: 'Directrice Générale',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    bio: '15 ans d\'expérience dans le secteur humanitaire',
+    name: 'FOSTRO MULATU PAKASA',
+    role: 'Coordonnateur',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740047853/uxyzzbg4blf8tyawk3gz.jpg',
+    // bio: '15 ans d\'expérience dans le secteur humanitaire',
   },
   {
-    name: 'Thomas Martin',
-    role: 'Responsable Projets Environnementaux',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    bio: 'Expert en développement durable et éducation environnementale',
+    name: 'DEDE ZINGA',
+    role: 'Coordonnateur adjoint',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740047857/qijrbsagrd32tucys85g.jpg',
+    // bio: 'Expert en développement durable et éducation environnementale',
   },
   {
-    name: 'Sarah Ndiaye',
-    role: 'Coordinatrice Santé',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    bio: 'Médecin spécialisée dans la lutte contre le paludisme',
+    name: 'ALPHONSE KHONDE LELO',
+    role: 'Administrateur',
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740047851/bqmdnmqv46cpemv4eeui.jpg',
+    // bio: 'Médecin spécialisée dans la lutte contre le paludisme',
+  },
+  {
+    name: "RAMAN'S HOSANNA MASASA",
+    role: "Chef de département de l'environnement et chef des projets",
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740047854/cz24mhha6nck5ce6k6ac.jpg',
+    // bio: 'Médecin spécialisée dans la lutte contre le paludisme',
+  },
+  {
+    name: "WINNIE BAMBI",
+    role: "Chargé des finances et caissière",
+    image: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740047856/r9xsdtnooiobajk1lp6w.jpg',
+    // bio: 'Médecin spécialisée dans la lutte contre le paludisme',
   },
 ]
 
@@ -144,7 +156,7 @@ export default function About() {
                 <CardContent className="flex-1 p-6">
                   <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
                   <p className="mt-1 text-sm font-medium text-pink-700">{member.role}</p>
-                  <p className="mt-4 text-sm text-gray-600">{member.bio}</p>
+                  {/* <p className="mt-4 text-sm text-gray-600">{member.bio}</p> */}
                 </CardContent>
               </Card>
             ))}

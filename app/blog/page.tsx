@@ -60,7 +60,7 @@ export default function Blog() {
             </nav>
 
             {/* Newsletter */}
-            <div className="mt-12">
+            {/* <div className="mt-12">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Newsletter</h2>
               <div className="rounded-lg bg-gray-50 p-6">
                 <h3 className="text-sm font-medium text-gray-900">
@@ -80,7 +80,7 @@ export default function Blog() {
                   </Button>
                 </form>
               </div>
-            </div>
+            </div> */}
           </aside>
 
           {/* Main Content */}

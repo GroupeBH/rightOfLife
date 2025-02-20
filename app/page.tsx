@@ -59,35 +59,35 @@ const latestPosts = [
 
 const partners = [
   {
-    name: 'Green Earth Foundation',
-    logo: 'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    type: 'ONG',
-  },
-  {
-    name: 'Health For All',
-    logo: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    type: 'Organisation de santé',
-  },
-  {
-    name: 'AgriTech Solutions',
-    logo: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    name: 'Perenco SA',
+    logo: 'https://res.cloudinary.com/dblzafklq/image/upload/v1740050143/deoek1ncvbplbbenjncu.png',
     type: 'Entreprise',
   },
   {
-    name: 'EcoTech Institute',
-    logo: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    type: 'Institut de recherche',
+    name: 'Surestream RDC SA',
+    logo: 'https://res.cloudinary.com/dblzafklq/image/upload/v1739954283/bxefmsw7uzuudaf6zm9g.jpg',
+    type: 'Entreprise',
   },
-  {
-    name: 'Sustainable Future',
-    logo: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    type: 'Fondation',
-  },
-  {
-    name: 'Global Health Initiative',
-    logo: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    type: 'Organisation internationale',
-  },
+  // {
+  //   name: 'AgriTech Solutions',
+  //   logo: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //   type: 'Entreprise',
+  // },
+  // {
+  //   name: 'EcoTech Institute',
+  //   logo: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //   type: 'Institut de recherche',
+  // },
+  // {
+  //   name: 'Sustainable Future',
+  //   logo: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //   type: 'Fondation',
+  // },
+  // {
+  //   name: 'Global Health Initiative',
+  //   logo: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //   type: 'Organisation internationale',
+  // },
 ]
 
 export default function Home() {
@@ -234,12 +234,12 @@ export default function Home() {
                 key={partner.name}
                 className="flex flex-col items-center gap-4 rounded-lg bg-gray-50 p-8 transition-colors hover:bg-gray-100"
               >
-                <div className="relative h-24 w-24 overflow-hidden rounded-full">
+                <div className="relative h-36 w-36 overflow-hidden">
                   <Image
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    className="object-cover"
+                    // className="object-cover"
                   />
                 </div>
                 <div className="text-center">

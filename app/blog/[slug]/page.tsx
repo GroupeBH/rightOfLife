@@ -143,7 +143,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         {/* Share and Navigation */}
         <div className="mt-16 flex items-center justify-between border-t pt-8">
           <Button variant="outline" asChild>
-            <Link href="/blog">← Retour aux articles</Link>
+            <Link href="/blog">← Retour aux réalisations</Link>
           </Button>
           {/* <div className="flex gap-4">
             <ShareButtons />

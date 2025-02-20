@@ -19,7 +19,7 @@ const navigation = [
   { name: 'Nos activités', href: '/activities' },
   { name: 'Nos réalisations', href: '/blog' },
   // { name: 'Partenaires', href: '/partners' },
-  { name: 'Contact', href: '/contact' },
+  // { name: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
@@ -63,7 +63,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="outline" className="text-pink-500 border-pink-500 hover:bg-blue-50" asChild>
-            <Link href="/join">Adhérer</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
           <Button variant="default" className="bg-blue-500 hover:bg-blue-600" asChild>
             <Link href="/contact">Faire un don</Link>
